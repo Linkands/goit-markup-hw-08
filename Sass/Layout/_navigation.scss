@@ -1,0 +1,386 @@
+.navigation {
+    border-bottom: 1px solid #ECECEC;
+}
+.navigation-logo {  
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.741;
+    /* identical to box height */
+    letter-spacing: 0.03em;
+
+        &-blue {
+            color: var(--accent-color);
+        }
+        &-white {
+            color: var(--secondary-color);
+        }
+        &-black {
+            color: var(--main-color);
+        }
+    }
+
+.navigation-list-ref {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.17214;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+
+    padding: 32px 0 32px 0;
+    position: relative;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+}
+
+.contact-list-icon {
+    fill: var(--text-color);
+    margin-right: 10px;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-list-ref {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.contact-list-ref:hover .contact-list-icon,
+.contact-list-ref:focus .contact-list-icon {
+    fill: var(--accent-color);
+}
+
+.navigation-list-ref.current-page::before {
+    content: "";
+    position: absolute;
+    background: var(--accent-color);
+    border-radius: 2px;
+
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: -8px;
+}
+
+.navigation-list-ref.current-page {
+    color: var(--accent-color);
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+    .navigation .container {
+        position: relative;
+    }
+    .contact-container {
+        display: none;
+        position: absolute;
+        top: 101%;
+        left: 0;
+        width: 100%;
+    
+        background-color: var(--secondary-color);
+        text-align: center;
+        
+        &.is-open {
+            display: block;
+        }
+    }
+    .navigation-site {
+        padding-top: 10px;
+        padding-bottom: 10px;   
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .contact-container {
+        padding: 60px 0;
+        z-index: 999;
+    }
+    .contact-list-ref {
+        font-size: 18px;
+        line-height: 1.1666;
+    }
+    .navigation-list {
+        margin-bottom: 60px;
+    }
+    .navigation-list-ref {
+        font-size: 18px;
+        line-height: 1.1666;
+        padding: 0px;
+    }
+    .navigation-list-item:not(:first-child) {
+        margin-top: 40px;
+    }
+    .contact-list-item:not(:first-child) {
+        margin-top: 16px;
+    }
+    .navigation-button {
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    .navigation-button-icon {
+        fill: var(--main-color);
+        cursor: pointer;
+
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .navigation-button:hover .navigation-button-icon,
+    .navigation-button:focus .navigation-button-icon {
+        fill: var(--accent-color);
+    }
+    
+    .navigation-button .icon-menu {
+        display: none;
+    }
+    
+    .navigation-button.is-open .icon-close{
+        display: none;
+    }
+    
+    .navigation-button.is-open .icon-menu {
+        display: block;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .navigation-button {
+        display: none;
+    }
+    .navigation-list {
+        width: 294px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 84px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    .navigation .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .contact-list {
+        justify-content: left;
+    }
+    .contact-list-icon {
+        margin-right: 8px;
+    }
+    .contact-list-ref {
+        justify-content: left;
+        font-size: 12px;
+        line-height: 1.17166;
+    }
+    .navigation-list-ref.current-page::before {
+        bottom: -1px;
+    }
+    .navigation-list-ref {
+        padding: 32px 0 32px 0;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .contact-list-item:not(:first-child) {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .contact-list {
+    display: flex;
+    }
+
+    .contact-list-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+    }
+
+    .contact-list-icon {
+        fill: var(--text-color);
+        margin-right: 10px;
+
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .navigation-list {
+        margin-right: 305px;
+    }
+}
+
+// .contact {
+//     display: flex;
+// }
+
+// .navigation-list-ref.current-page{
+//     color: var(--accent-color);
+// }
+
+// .contact-list-ref:hover .contact-list-icon,
+// .contact-list-ref:focus .contact-list-icon {
+//     fill: var(--accent-color);
+// }
+    
+
+// .navigation-list {
+//     display: flex;
+// }
+
+// .navigation-list-item {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//         &:not(:last-child) {
+//             margin-right: 50px;
+//         }
+// }
+
+// .navigation-list-ref {
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 1.143;
+//     letter-spacing: 0.02em;
+//     color: var(--main-color);
+
+//     padding: 32px 0 32px 0;
+//     position: relative;
+
+//     transition-property: color;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+//         &:hover,
+//         &:focus {
+//             color: var(--accent-color);
+//         }
+// }
+
+// .navigation-list-ref.current-page::before {
+//     content: "";
+//     position: absolute;
+//     background: var(--accent-color);
+//     border-radius: 2px;
+
+//     height: 4px;
+//     width: 100%;
+//     left: 0;
+//     bottom: 0;
+// }
+
+// .contact {
+//     align-items: center;
+//     margin-left: auto;
+// }
+
+// .contact-list {
+//     display: flex;
+// }
+
+// .contact-list-item {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//         &:not(:last-child) {
+//             margin-right: 50px;
+//         }
+// }
+
+// .contact-list-icon {
+//     fill: var(--text-color);
+//     margin-right: 10px;
+
+//     transition-property: fill;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// .contact-list-ref {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 1.143;
+//     letter-spacing: 0.02em;
+//     color: var(--text-color);
+//     padding: 32px 0;
+
+//     transition-property: color;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+//     &:hover,
+//     &:focus {
+//         color: var(--accent-color);
+//     }
+// }
+
+// .navigation-logo {  
+//     font-family: Raleway;
+//     font-style: normal;
+//     font-weight: bold;
+//     font-size: 26px;
+//     line-height: 1.91;
+//     /* identical to box height */
+//     letter-spacing: 0.03em;
+//     margin-right: 93px;
+
+//         &-blue {
+//             color: var(--accent-color);
+//         }
+//         &-white {
+//             color: var(--secondary-color);
+//         }
+//         &-black {
+//             color: var(--main-color);
+//         }
+//     }
+

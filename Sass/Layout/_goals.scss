@@ -1,0 +1,134 @@
+.goals {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.goals-list-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.1721;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.goals-list-icon-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F4FA;
+    border-radius: 4px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .goals-list-item:not(:last-child) {
+        margin-bottom: 30px;
+    }   
+}
+
+.goals-list-info {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.7142;
+    /* or 171% */
+    letter-spacing: 0.03em;
+
+    color: var(--text-color);
+    text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+    .goals {
+        padding: 60px 0 30px 0;
+    }
+    
+    .goals-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .goals-list-item {
+        width: 354px;
+        margin-bottom: 30px;
+
+        &:not(:nth-child(2n)) {
+                margin-right: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .goals {
+    padding: 94px 0 94px 0;
+    }
+    .goals-list-title {
+        line-height: 1.143;
+        text-align: left;
+    }
+    .goals-list-item {
+        width: 270px;
+        margin-bottom: 0px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }  
+} 
+
+
+
+
+// .goals-list-title {
+//     font-style: normal;
+//     font-weight: bold;
+//     font-size: 14px;
+//     line-height: 1.143;
+//     letter-spacing: 0.03em;
+//     text-transform: uppercase;
+
+//     color: var(--main-color);
+//     margin-bottom: 10px;
+// }
+
+// .goals-list {
+//     display: flex;
+// }
+
+// .goals-list-item {
+//     min-width: 270px;
+
+//     &:not(:last-child) {
+//         margin-right: 30px;
+//     }
+// }
+
+// .goals-list-icon-bg {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: #F5F4FA;
+//     border-radius: 4px;
+//     margin-bottom: 30px;
+//     min-height: 120px;
+// }
+
+// .goals-list-icon {
+//     display: block;
+// }
+
+// .goals-list-info {
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 14px;
+//     line-height: 24px;
+//     /* or 171% */
+//     letter-spacing: 0.03em;
+
+//     color: var(--text-color);
+// }
